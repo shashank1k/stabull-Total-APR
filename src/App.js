@@ -101,7 +101,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 to-cyan-900 text-white p-6">
       <h1 className="text-4xl font-bold mb-10 text-center">
-        Stabull Token Dashboard
+        Stabull Pools Dashboard
       </h1>
 
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
