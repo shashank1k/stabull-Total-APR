@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 /**
  * Remove leading emoji: "🟣 AUDF" → "AUDF"
  */
-const normalizeLabel = (label = "") =>
-  label.replace(/^\p{Extended_Pictographic}+\s*/u, "").trim();
+// const normalizeLabel = (label = "") =>
+//   label.replace(/^\p{Extended_Pictographic}+\s*/u, "").trim();
 
 export default function App() {
   const [cards, setCards] = useState([]);
