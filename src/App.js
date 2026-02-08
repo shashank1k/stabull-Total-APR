@@ -115,7 +115,9 @@ export default function App() {
               {/* TOKEN HEADER */}
               <div className="flex items-center justify-between mb-3">
                 <h2 className="text-2xl font-semibold">{token}</h2>
-                <span className="text-sm text-cyan-300">{dune.chain}</span>
+                <span className="text-sm text-cyan-300">
+                  {dune.chain?.toUpperCase()}
+                </span>
               </div>
 
               {/* DUNE DATA */}
