@@ -41,7 +41,9 @@ export default function App() {
         const merklMap = {};
         merklPools.forEach((pool) => {
           if (pool.name) {
-            merklMap[pool.name.trim()] = pool;
+            merklMap[
+              pool.name.trim() + " - " + pool.chain?.name?.toLowerCase()
+            ] = pool;
           }
         });
 
@@ -52,8 +54,10 @@ export default function App() {
           const token = normalizeLabel(row.label);
           //const matchedPool = merklMap[token] || null;
           console.log(merklMap);
-          const matchedPool = Object.entries(merklMap).find(([key]) =>
-            key.toLowerCase().includes(token.toLowerCase()),
+          const matchedPool = Object.entries(merklMap).find(
+            ([key]) =>
+              key.toLowerCase().includes(token.toLowerCase()) &&
+              key.toLowerCase().includes(row.chain?.toLowerCase()),
           );
           console.log("MATCHED POOL:" + token + " => ", matchedPool);
           //const matchedPool = match ? match[1] : null;
